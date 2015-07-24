@@ -1,0 +1,17 @@
+{{#if isUploading}}
+  <div class="progress upload-progress">
+    <div style={{progressStyle}} class="progress-bar {{if isUploading 'active'}}"
+      role="progressbar"
+      aria-valuenow={{progressValue}}
+      aria-valuemin="0"
+      aria-valuemax="100">
+    </div>
+  </div>
+{{else}}
+  {{#if processing}}
+    <div class="progress processing-progress">
+      <div class="progress-bar progress-bar-striped active" style="width: 100%;">
+      </div>
+    </div>
+  {{/if}}
+{{/if}}

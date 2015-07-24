@@ -34,8 +34,7 @@ test('it changes value', function(assert) {
 });
 
 test('it triggers targetObject action', function(assert) {
-  expect(1);
-  var component = this.subject({
+  this.subject({
     content: ['a', 'b'],
     action: 'someAction',
     targetObject: {
